@@ -22,6 +22,6 @@ spring:
         - id: demo-service-api # 路由的 id,要保证其唯一性
           uri: http://localhost:8081 # lb 表示从 nacos 中按照名称获取微服务，并遵循负载均衡策略
           predicates:
-            - Path=/hello/**  # 使用断言
+            - Path=/demo/**  # 使用断言
           filters: # 过滤器,请求在传递过程中可以通过过滤器对其进行一定的修改
             - StripPrefix=1             # 转发之前去掉 1层路径

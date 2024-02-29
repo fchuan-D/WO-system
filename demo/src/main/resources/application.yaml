@@ -6,12 +6,12 @@ spring:
   application:
     name: demo
   datasource:
-    url: jdbc:mysql://${hm.db.host}:3306/hmall?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://${local.db.host}:3306/wo_db?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: ${hm.db.pw}
+    password: ${local.db.pw}
   cloud:
     nacos:
       discovery:
-        # 配置Nacos注册中心地址
+        # 配置 Nacos注册中心地址
         server-addr: 39.106.69.140:8848

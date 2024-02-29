@@ -1,4 +1,4 @@
-hm:
+local:
   db:
-    host: mysql
-    pw: 123
+    host: localhost # 修改为你自己的虚拟机IP地址
+    pw: password # 修改为docker中的 MySQL密码
