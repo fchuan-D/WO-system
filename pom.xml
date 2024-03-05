@@ -10,9 +10,10 @@
     <packaging>pom</packaging>
     <!-- 子模块 -->
     <modules>
-        <module>demo</module>
-        <module>gateway-server</module>
-        <module>Common</module>
+        <module>user-service</module>
+        <module>job-service</module>
+        <module>gateway-service</module>
+        <module>common</module>
     </modules>
     <!-- 引入spring boot -->
     <parent>
@@ -61,17 +62,17 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+            <!-- lombok 管理 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${org.projectlombok.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <!-- 子模块直接继承的依赖 -->
     <dependencies>
-        <!-- lombok 管理 -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${org.projectlombok.version}</version>
-        </dependency>
         <!-- 单元测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

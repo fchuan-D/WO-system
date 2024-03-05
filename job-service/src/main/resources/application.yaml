@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: local
+  application:
+    name: job-service
+  datasource:
+    url: jdbc:mysql://${local.db.host}:3306/wo_db?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ${local.db.pw}
+  cloud:
+    nacos:
+      discovery:
+        # 配置 Nacos注册中心地址
+        server-addr: 120.79.9.19:8848
+        username: fchuan
+        password: nacos
