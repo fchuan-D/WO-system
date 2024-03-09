@@ -1,4 +1,0 @@
-local:
-  db:
-    host: localhost
-    pw: password
