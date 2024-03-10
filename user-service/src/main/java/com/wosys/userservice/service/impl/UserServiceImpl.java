@@ -8,6 +8,7 @@ import com.wosys.userservice.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 
 @Service
@@ -28,4 +29,8 @@ public class UserServiceImpl implements UserService {
         return userMapper.insert(user);
     }
 
+    @Override
+    public List<User> getUserList() {
+        return userMapper.selectList(null);
+    }
 }

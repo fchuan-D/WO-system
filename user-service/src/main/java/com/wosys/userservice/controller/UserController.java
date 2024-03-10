@@ -2,6 +2,7 @@
 // @email:945001786@qq.com
 package com.wosys.userservice.controller;
 
+import com.wosys.common.domain.dto.Result;
 import com.wosys.common.domain.po.User;
 import com.wosys.userservice.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @ResponseBody
@@ -19,9 +23,21 @@ public class UserController {
 
 
     @GetMapping("/get/{uid}")
-    public User GetUser(@PathVariable("uid") int uid) {
+    public Result GetUser(@PathVariable("uid") int uid) {
         System.out.println("get user");
-        return userService.getUserByUId(uid);
+        User user = userService.getUserByUId(uid);
+        Map<String, Object> res = new LinkedHashMap<>();
+        res.put("user", user);
+        return Result.success(res);
+    }
+
+    @GetMapping("/get/list")
+    public Result GetUserList() {
+        System.out.println("get user list");
+        List<User> users = userService.getUserList();
+        Map<String, Object> res = new LinkedHashMap<>();
+        res.put("users", users);
+        return Result.success(res, (long) users.size());
     }
 
     @GetMapping("/insert")
