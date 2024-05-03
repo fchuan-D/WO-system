@@ -10,22 +10,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="job-service" />
-        <module name="user-service" />
         <module name="common" />
         <module name="gateway-service" />
+        <module name="upload-service" />
+        <module name="user-service" />
+        <module name="provider-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="auth-service" target="17" />
+      <module name="cl-gateway" target="17" />
+      <module name="cl-upload" target="1.8" />
       <module name="demo (1)" target="17" />
+      <module name="job-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-service" options="-parameters" />
+      <module name="cl-gateway" options="-parameters" />
+      <module name="cl-upload" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="demo (1)" options="" />
       <module name="gateway-service" options="-parameters" />
       <module name="job-service" options="-parameters" />
+      <module name="provider-service" options="-parameters" />
+      <module name="upload-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

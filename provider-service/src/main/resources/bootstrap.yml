@@ -1,0 +1,20 @@
+server:
+  port: 7008
+spring:
+  application:
+    name: provider-service
+  profiles:
+    # 环境也是和配置文件保持一致
+    active: test
+  cloud:
+    nacos:
+      config:
+        # test:de6fe06b-1f20-441c-ac9e-2697381adfc6
+        # dev:71120864-6606-41cd-9241-3e7c8a05bce5
+        namespace: de6fe06b-1f20-441c-ac9e-2697381adfc6
+        # 配置文件后缀名
+        file-extension: yaml
+        # 配置中心服务器地址，也就是 Nacos地址
+        server-addr: 120.79.9.19:8848
+        username: fchuan
+        password: nacos

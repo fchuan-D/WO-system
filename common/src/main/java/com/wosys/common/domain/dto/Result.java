@@ -5,7 +5,7 @@ import lombok.Data;
 /*
  * 返回前端统一数据的封装类
  * @author rabbiter
- * @date 2023/1/2 20:36
+ * @date 2024/4/1 20:36
  */
 @Data
 public class Result {
@@ -19,8 +19,16 @@ public class Result {
         return result(400, "失败", 0L, null);
     }
 
+    public static Result fail(String msg) {
+        return result(400, msg, 0L, null);
+    }
+
     public static Result success() {
         return result(200, "成功", 0L, null);
+    }
+
+    public static Result success(String msg) {
+        return result(200, msg, 0L, null);
     }
 
     public static Result success(Object data) {
