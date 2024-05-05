@@ -10,7 +10,6 @@
     </parent>
 
     <artifactId>user-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>user-service</name>
     <description>用户微服务</description>
 
