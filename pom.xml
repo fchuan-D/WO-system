@@ -34,6 +34,7 @@
         <jackson.version>2.13.0</jackson.version>
         <jwt.version>0.10.6</jwt.version>
         <hutool.version>5.7.6</hutool.version>
+        <nacos.client.version>2.2.3</nacos.client.version>
     </properties>
 
     <dependencyManagement>
@@ -53,6 +54,11 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos.client.version}</version>
             </dependency>
             <!-- mysql数据库驱动包管理 -->
             <dependency>
